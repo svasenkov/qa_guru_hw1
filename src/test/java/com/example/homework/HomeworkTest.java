@@ -25,7 +25,7 @@ public class HomeworkTest {
 
     @BeforeAll
     public static void setUpAllure() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+        SelenideLogger.addListener("allure", new AllureSelenide().screenshots(true).savePageSource(true));
         Configuration.startMaximized = true;
     }
 
