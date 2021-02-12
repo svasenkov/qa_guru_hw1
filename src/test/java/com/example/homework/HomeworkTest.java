@@ -25,7 +25,7 @@ public class HomeworkTest {
 
     @BeforeAll
     public static void setUpAllure() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.startMaximized = true;
     }
 
