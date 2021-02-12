@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 @Getter
@@ -15,7 +16,7 @@ public class PracticeFormPage {
     private SelenideElement firstNameInput = $("#firstName");
     private SelenideElement lastNameInput = $("#lastName");
     private SelenideElement userEmail = $("#userEmail");
-    private SelenideElement maleRadio = $x("//input[@value='Male']/following-sibling::label");
+    private SelenideElement maleRadio = $(byText("Male"));
     private SelenideElement otherRadio = $("input[value='Other']");
     private SelenideElement mobileNumberInput = $("#userNumber");
     private SelenideElement dateOfBirthInput = $("#dateOfBirthInput");
@@ -25,7 +26,7 @@ public class PracticeFormPage {
     private SelenideElement monthDropdown = $(".react-datepicker__month-select");
     private SelenideElement subjectsInput = $("#subjectsInput");
     private ElementsCollection selectedSubjects = $$(".subjects-auto-complete__multi-value__label");
-    private SelenideElement sportsCheckbox = $x("//div[contains(normalize-space(.), 'Sports') and contains(@class, 'checkbox')]");
+    private SelenideElement sportsCheckbox = $("#hobbiesWrapper").$(byText("Sports"));
     private SelenideElement readingCheckbox = $x("//div[contains(normalize-space(.), 'Reading') and contains(@class, 'checkbox')]");
     private SelenideElement musicCheckbox = $x("//div[contains(normalize-space(.), 'Music') and contains(@class, 'checkbox')]");
     private SelenideElement uploadPictureInput = $("#uploadPicture");
